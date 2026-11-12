@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --navy: #101B35;
+    --royal-blue: #315FEA;
+    --royal-blue-hover: #264ecc;
+    --teal: #20C9A7;
+    --teal-dark: #17a98c;
+    --bg-light: #F7F9FC;
+    --card-light: #FFFFFF;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #1e293b;
+    background-color: #F7F9FC;
+    overflow-x: hidden;
+  }
+
+  /* CRITICAL BUG FIX: Input text visibility */
+  input, textarea, select {
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    opacity: 1 !important;
+    caret-color: #315FEA !important;
+    font-size: 0.95rem;
+  }
+
+  .dark input, .dark textarea, .dark select {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    opacity: 1 !important;
+    caret-color: #20C9A7 !important;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: #94a3b8 !important;
+    -webkit-text-fill-color: #94a3b8 !important;
+    opacity: 0.85 !important;
+  }
+
+  .dark input::placeholder, .dark textarea::placeholder {
+    color: #64748b !important;
+    -webkit-text-fill-color: #64748b !important;
+  }
+}
+
+/* Custom 3D perspective for Curved Carousel */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Custom scrollbar for dashboard */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Safe area padding for mobile floating elements */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 1rem);
+}

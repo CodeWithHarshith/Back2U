@@ -1,0 +1,8 @@
+{
+  "name": "Back2U - Lost & Found Network",
+  "description": "India's Lost & Found Network - Track lost belongings, manage reports, and reconnect people with their possessions with intelligent matching.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
